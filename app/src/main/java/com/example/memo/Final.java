@@ -25,11 +25,11 @@ public class Final extends AppCompatActivity {
         Save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String t = Title.getText().toString();
-                String b = Body.getText().toString();
-                mex e = new mex(t,b);
-                mu.add(e);
+                String title = Title.getText().toString();
+                String body = Body.getText().toString();
                 Intent j = new Intent(Final.this, MemoActivity.class);
+                j.putExtra("titu",title);
+                j.putExtra("bod",body);
                 startActivity(j);
                 finish();
             }

@@ -20,6 +20,7 @@ import java.util.ArrayList;
 public class MemoActivity extends AppCompatActivity {
     ArrayList<mex> mu = mex.getRandommemo();
     ListView lv;
+    String s,st;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,10 +62,12 @@ public class MemoActivity extends AppCompatActivity {
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
             View itemView=getLayoutInflater().inflate(R.layout.items,viewGroup,false);
-            TextView ti=itemView.findViewById(R.id.ti);
-            TextView bo=itemView.findViewById(R.id.bo);
-            ti.setText(getItem(i).getTitle());
-            bo.setText(getItem(i).getBody());
+            TextView ti=itemView.findViewById(R.id.title);
+            TextView bo=itemView.findViewById(R.id.body);
+            st=getIntent().getExtras().getString("titu");
+            s=getIntent().getExtras().getString("bod");
+            ti.setText(st);
+            bo.setText(s);
             return itemView;
         }
     }
