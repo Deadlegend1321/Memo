@@ -11,7 +11,7 @@ import android.widget.EditText;
 import java.util.ArrayList;
 
 public class Final extends AppCompatActivity {
-    ArrayList<mex> mu = mex.getRandommemo();
+    ArrayList<String> mu = mex.getRandommemo();
     EditText Title,Body;
     Button Save;
 
@@ -27,6 +27,7 @@ public class Final extends AppCompatActivity {
             public void onClick(View view) {
                 String title = Title.getText().toString();
                 String body = Body.getText().toString();
+
                 Intent j = new Intent(Final.this, MemoActivity.class);
                 j.putExtra("titu",title);
                 j.putExtra("bod",body);

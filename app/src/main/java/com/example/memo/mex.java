@@ -28,8 +28,8 @@ public class mex {
         this.title = title;
     }
 
-    public static ArrayList<mex> getRandommemo(){
-        ArrayList<mex> mu=new ArrayList<>();
+    public static ArrayList<String> getRandommemo(){
+        ArrayList<String> mu=new ArrayList<>();
         return mu;
     }
 
